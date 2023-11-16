@@ -1,0 +1,306 @@
+.container {
+  .service {
+    &-title {
+      color: var(--1, #100e0e);
+      font-family: "SF Pro Display 700";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-bottom: 24px;
+      margin-top: 40px;
+    }
+    &-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      &-1 {
+        width: 228px;
+        height: 500px;
+        background: linear-gradient(180.04deg, #fe94a6 0.04%, #f2f2f2 65.84%);
+        border-radius: 16px;
+        padding: 24px 8px 32px 8px;
+        position: relative;
+
+        &-title {
+          color: var(--1, #100e0e);
+          text-align: center;
+          font-family: "SF Pro Display 700";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 16px;
+        }
+
+        &-info {
+          color: var(--07, #585656);
+          text-align: center;
+          font-family: "SF Pro Display 400";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 8px;
+        }
+        &-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px 50px;
+
+          color: $prime;
+          font-family: "SF Pro Display 500";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+          line-height: 21px;
+          border: 1px solid #0071e4;
+          border-radius: 8px;
+          position: absolute;
+          bottom: 32px;
+          left: 18px;
+          &:hover {
+            color: #c1e0ff;
+            background-color: #0071e4;
+            cursor: pointer;
+            transition: 0.1s all ease;
+          }
+        }
+      }
+      &-2 {
+        width: 228px;
+        height: 500px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #e685ff 0.04%, #f2f2f2 65.84%);
+        padding: 24px 8px 32px 8px;
+        position: relative;
+
+        &-title {
+          color: var(--1, #100e0e);
+          text-align: center;
+          font-family: "SF Pro Display 700";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 16px;
+        }
+
+        &-info {
+          color: var(--07, #585656);
+          text-align: center;
+          font-family: "SF Pro Display 400";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 8px;
+        }
+        &-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px 50px;
+
+          color: $prime;
+          font-family: "SF Pro Display 500";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+          line-height: 21px;
+          border: 1px solid #0071e4;
+          border-radius: 8px;
+          position: absolute;
+          bottom: 32px;
+          left: 18px;
+          &:hover {
+            color: #c1e0ff;
+            background-color: #0071e4;
+            cursor: pointer;
+            transition: 0.1s all ease;
+          }
+        }
+      }
+      &-3 {
+        width: 228px;
+        height: 500px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #7de9ff 0.04%, #f2f2f2 65.84%);
+        padding: 24px 8px 32px 8px;
+        position: relative;
+
+        &-title {
+          color: var(--1, #100e0e);
+          text-align: center;
+          font-family: "SF Pro Display 700";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 16px;
+        }
+
+        &-info {
+          color: var(--07, #585656);
+          text-align: center;
+          font-family: "SF Pro Display 400";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 8px;
+        }
+        &-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px 50px;
+
+          color: $prime;
+          font-family: "SF Pro Display 500";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+          line-height: 21px;
+          border: 1px solid #0071e4;
+          border-radius: 8px;
+          position: absolute;
+          bottom: 32px;
+          left: 18px;
+
+          &:hover {
+            color: #c1e0ff;
+            background-color: #0071e4;
+            cursor: pointer;
+            transition: 0.1s all ease;
+          }
+        }
+      }
+      &-4 {
+        width: 228px;
+        height: 500px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #ffe685 0.04%, #f6f6f6 65.84%);
+        padding: 24px 8px 32px 8px;
+        position: relative;
+
+        &-title {
+          color: var(--1, #100e0e);
+          text-align: center;
+          font-family: "SF Pro Display 700";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 16px;
+        }
+
+        &-info {
+          color: var(--07, #585656);
+          text-align: center;
+          font-family: "SF Pro Display 400";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 8px;
+        }
+        &-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px 50px;
+
+          color: $prime;
+          font-family: "SF Pro Display 500";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+          line-height: 21px;
+          border: 1px solid #0071e4;
+          border-radius: 8px;
+          position: absolute;
+          bottom: 32px;
+          left: 18px;
+
+          &:hover {
+            color: #c1e0ff;
+            background-color: #0071e4;
+            cursor: pointer;
+            transition: 0.1s all ease;
+          }
+        }
+      }
+      &-5 {
+        width: 228px;
+        height: 500px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #adffc1 0.04%, #f2f2f2 65.84%),
+          #f2f2f2;
+        padding: 24px 8px 32px 8px;
+        position: relative;
+
+        &-title {
+          color: var(--1, #100e0e);
+          text-align: center;
+          font-family: "SF Pro Display 700";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 16px;
+        }
+
+        &-info {
+          color: var(--07, #585656);
+          text-align: center;
+          font-family: "SF Pro Display 400";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 8px;
+        }
+        &-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px 50px;
+
+          color: $prime;
+          font-family: "SF Pro Display 500";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+          line-height: 21px;
+          border: 1px solid #0071e4;
+          border-radius: 8px;
+          position: absolute;
+          bottom: 32px;
+          left: 18px;
+
+          &:hover {
+            color: #c1e0ff;
+            background-color: #0071e4;
+            cursor: pointer;
+            transition: 0.1s all ease;
+          }
+        }
+      }
+    }
+  }
+}

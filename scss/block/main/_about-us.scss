@@ -1,0 +1,21 @@
+.about-us {
+  padding: 32px;
+  .container {
+    .about-us-title {
+      color: var(--1, #100e0e);
+      font-family: "SF Pro Display 700";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .about-us-info {
+      color: var(--07, #585656);
+      font-family: "SF Pro Display 400";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

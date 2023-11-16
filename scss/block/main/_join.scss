@@ -1,0 +1,89 @@
+.join {
+  padding-top: 21px;
+  .join-container {
+    gap: 88px;
+    display: flex;
+    padding: 40px 20px;
+
+    .join-right {
+      &-h1 {
+        color: var(--1, #100e0e);
+        font-family: "SF Pro Display 700";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+        width: 421px;
+      }
+      &-p {
+        color: var(--07, #585656);
+        font-family: "SF Pro Display 400";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 10px;
+        width: 421px;
+      }
+      &-card {
+        width: 486px;
+        background: linear-gradient(90.34deg, #f7355d 0.3%, #9747ff 101.33%);
+        border-radius: 16px;
+        margin-top: 25px;
+        padding: 16px 32px 32px;
+        h1 {
+          color: #fff;
+          font-family: "SF Pro Display 700";
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin: 0;
+        }
+        p {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #ffffff;
+          margin-top: 5px;
+        }
+        .input-and-button {
+          display: flex;
+          margin-top: 16px;
+
+          input {
+            width: 246px;
+            height: 56px;
+            background: #ffffff;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            margin-right: 16px;
+            padding: 14px 24px;
+            font-family: "SF Pro Display 500";
+          }
+          button {
+            width: 160px;
+            height: 56px;
+            background: #e7e7e7;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            color: var(--07, #585656);
+            font-family: "SF Pro Display 500";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            &:focus {
+              background: $prime;
+              color: #fff;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

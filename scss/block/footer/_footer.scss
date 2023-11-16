@@ -1,0 +1,118 @@
+footer {
+  .footer-container {
+    display: flex;
+    padding: 40px 20px;
+    .first {
+      width: 273px;
+      color: var(--03, #b7b7b7);
+      font-family: "SF Pro Display 400";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-right: 48px;
+      &-p1 {
+        margin-top: 27px;
+      }
+      &-p2 {
+        margin-top: 8px;
+      }
+
+      &-p3 {
+        margin-top: 24px;
+      }
+    }
+    .second {
+      color: var(--1, #100e0e);
+      font-family: "SF Pro Display 400";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      &-list {
+        list-style-type: none;
+        &-item {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          margin-bottom: 16px;
+          color: #100e0e;
+        }
+      }
+    }
+    .third {
+      margin-left: 40px;
+      color: var(--1, #100e0e);
+      font-family: "SF Pro Display 400";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      &-list {
+        list-style-type: none;
+        &-item {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          margin-bottom: 16px;
+          color: #100e0e;
+        }
+      }
+    }
+    .fourth {
+      margin-left: 175px;
+      &-h1 {
+        color: var(--1, #100e0e);
+        font-family: "SF Pro Display 500";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+      }
+      &-p {
+        color: var(--06, #706e6e);
+        font-family: "SF Pro Display 400";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 10px 0;
+      }
+      &-icons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &-p {
+          color: var(--prime, #0071e4);
+          font-family: "SF Pro Display 500";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin-right: 24px;
+        }
+      }
+      &-p4 {
+        color: var(--1, #100e0e);
+        font-family: "SF Pro Display 500";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 40px;
+      }
+      &-p5 {
+        color: var(--1, #100e0e);
+        font-family: "SF Pro Display 500";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 10px;
+      }
+    }
+  }
+}
