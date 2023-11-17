@@ -1,7 +1,7 @@
 main {
   .hero_section {
     background: #d0eafc;
-    padding-top: 100px;
+    padding-top: 438px;
 
     .container {
       .hero {
@@ -9,6 +9,9 @@ main {
         align-items: start;
         gap: 48px;
         justify-content: center;
+        .mobile-hero {
+          display: none;
+        }
         .hero-content {
           display: flex;
           flex-direction: column;
@@ -24,6 +27,9 @@ main {
             margin: 0;
             margin-top: 21px;
             margin-bottom: 19px;
+            .one-mob {
+              display: none;
+            }
           }
           .hero-price {
             color: #1e3240;
@@ -102,6 +108,102 @@ main {
               margin: 0;
               margin-top: 21px;
               margin-bottom: 19px;
+              .one-mob {
+                display: none;
+              }
+            }
+            .hero-price {
+              color: #1e3240;
+              font-family: "SF Pro Display 400";
+              font-size: 32px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              margin-bottom: 19px;
+              span {
+                color: #1e3240;
+                font-family: "SF Pro Display 400";
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              }
+            }
+            .hero-btn {
+              color: #fff;
+              font-family: "SF Pro Display 500";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              display: flex;
+              width: 160px;
+              height: 56px;
+              justify-content: center;
+              align-items: center;
+              gap: 8px;
+              flex-shrink: 0;
+              border-radius: 8px;
+              background: var(--prime, #0071e4);
+              border: none;
+              &:hover {
+                background: var(--light-prime, #2a93fd);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 554px) {
+  main {
+    .hero_section {
+      background: #d0eafc;
+      padding-top: 50px;
+
+      .container {
+        .hero {
+          display: flex;
+          align-items: start;
+          gap: 48px;
+          justify-content: center;
+          flex-direction: column-reverse;
+          .hero-img {
+            display: block;
+            margin: 0 auto;
+            display: none;
+          }
+          .mobile-hero {
+            display: block;
+            margin: 0 auto;
+          }
+          .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            margin: 0 auto;
+            &-title {
+              color: #1e3240;
+              font-family: "SF Pro Display 700";
+              font-size: 58px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              margin: 0;
+              margin-top: 21px;
+              margin-bottom: 19px;
+              display: flex;
+              align-items: center;
+              img {
+                margin: 0 10px;
+                display: none;
+              }
+              .one-mob {
+                display: block;
+              }
             }
             .hero-price {
               color: #1e3240;

@@ -3,6 +3,9 @@
   &-container {
     display: flex;
     gap: 88px;
+    .middle-img {
+      display: none;
+    }
     .black-content {
       padding-top: 82px;
       img {
@@ -11,6 +14,7 @@
         height: auto;
         object-fit: contain;
       }
+
       &-title {
         color: #fff;
         font-family: "SF Pro Display 500";
@@ -51,6 +55,140 @@
         }
         &:focus {
           background-color: $prime-active;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 813px) {
+  .black {
+    background-color: black;
+    &-container {
+      display: flex;
+      gap: 68px;
+      .middle-img {
+        display: none;
+      }
+      .black-content {
+        padding-top: 82px;
+        img {
+          max-width: 246px;
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+
+        &-title {
+          color: #fff;
+          font-family: "SF Pro Display 700";
+          font-size: 38px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        &-desc {
+          color: #fff;
+          font-family: "SF Pro Display 500";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin: 16px 0 24px 0;
+        }
+        .hero-btn {
+          color: #fff;
+          font-family: "SF Pro Display 500";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          display: flex;
+          width: 160px;
+          height: 56px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          flex-shrink: 0;
+          border-radius: 8px;
+          background: var(--prime, #0071e4);
+          border: none;
+          &:hover {
+            background: var(--light-prime, #2a93fd);
+          }
+          &:focus {
+            background-color: $prime-active;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .black {
+    background-color: black;
+    padding: 20px 0;
+
+    &-container {
+      display: flex;
+      gap: 18px;
+      height: 151px;
+      img {
+        display: none;
+      }
+      .middle-img {
+        display: block;
+      }
+      .black-content {
+        padding-top: 0;
+        img {
+          max-width: 246px;
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+
+        &-title {
+          color: #fff;
+          font-family: "SF Pro Display 700";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        &-desc {
+          color: #fff;
+          font-family: "SF Pro Display 500";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin: 16px 0 24px 0;
+        }
+        .hero-btn {
+          color: #fff;
+          font-family: "SF Pro Display 500";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          display: flex;
+          width: 120px;
+          height: 46px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          flex-shrink: 0;
+          border-radius: 8px;
+          background: var(--prime, #0071e4);
+          border: none;
+          &:hover {
+            background: var(--light-prime, #2a93fd);
+          }
+          &:focus {
+            background-color: $prime-active;
+          }
         }
       }
     }

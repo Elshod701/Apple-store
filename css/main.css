@@ -365,6 +365,22 @@ input {
   outline-color: rgb(216, 225, 225);
 }
 
+header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 4444;
+}
+header .container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 header .container .nav {
   max-width: 1200px;
   width: 100%;
@@ -405,7 +421,6 @@ header .container .nav__catalog {
   max-width: 1200px;
   width: 100%;
   height: 94px;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -549,7 +564,6 @@ header .container .nav .fourth-nav {
   max-width: 12000px;
   width: 100%;
   height: 80px;
-  flex-shrink: 0;
 }
 header .container .nav .fourth-nav .first-phone {
   display: flex;
@@ -577,7 +591,6 @@ header .container .nav .fourth-nav .reklama {
   max-width: 280px;
   width: 100%;
   height: 64px;
-  flex-shrink: 0;
   border-radius: 8px;
   background: linear-gradient(90deg, #000 22.19%, #5e556b 100%);
 }
@@ -610,11 +623,10 @@ header .container .mobile-nav {
   display: none;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1189px) {
   header .container .nav {
-    max-width: 992px;
+    max-width: 1189px;
     width: 100%;
-    flex-shrink: 0;
     padding: 4px 0;
   }
   header .container .nav__location {
@@ -654,7 +666,6 @@ header .container .mobile-nav {
     max-width: 1200px;
     width: 100%;
     height: 94px;
-    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -800,7 +811,6 @@ header .container .mobile-nav {
     max-width: 12000px;
     width: 100%;
     height: 80px;
-    flex-shrink: 0;
     display: none;
   }
   header .container .nav .fourth-nav .first-phone {
@@ -829,7 +839,6 @@ header .container .mobile-nav {
     max-width: 280px;
     width: 100%;
     height: 64px;
-    flex-shrink: 0;
     border-radius: 8px;
     background: linear-gradient(90deg, #000 22.19%, #5e556b 100%);
   }
@@ -856,20 +865,30 @@ header .container .mobile-nav {
     right: 5%;
   }
   header .container .tablet-nav {
+    max-width: 1189px;
+    width: 100%;
     display: flex;
     align-items: center;
-    padding: 4px 0;
+    padding: 8px 0;
     justify-content: space-between;
   }
-  header .container .tablet-nav img {
-    margin-left: 32px;
+  header .container .tablet-nav-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
   }
-  header .container .tablet-nav-search {
+  header .container .tablet-nav-left img {
+    margin-left: 0px;
+  }
+  header .container .tablet-nav-left .tablet-nav-search {
     display: flex;
     align-items: center;
-    margin-left: -300px;
+    margin-left: 0px;
+    max-width: 300px;
+    width: 100%;
   }
-  header .container .tablet-nav-search input {
+  header .container .tablet-nav-left .tablet-nav-search input {
+    width: auto;
     border: none;
     color: var(--03, #b7b7b7);
     font-family: "SF Pro Display 400";
@@ -878,32 +897,49 @@ header .container .mobile-nav {
     font-weight: 400;
     line-height: normal;
     outline: none;
-    padding: 4px 10px;
-    max-width: 200px;
-    width: 100%;
+    padding: 5px 10px 5px 35px;
+    background: transparent;
+    width: 300px;
   }
-  header .container .tablet-nav-tel {
+  header .container .tablet-nav-left .tablet-nav-search input:focus {
+    outline: 2px solid #d9ebf9;
+    box-shadow: #d9ebf9;
+    color: #000000;
+    border-radius: 8px;
+  }
+  header .container .tablet-nav-left .tablet-nav-search .search-icon {
+    margin-right: -27px;
+  }
+  header .container .tablet-nav .tablet-nav-right {
     display: flex;
     align-items: center;
     gap: 4px;
   }
-  header .container .tablet-nav-tel a {
+  header .container .tablet-nav .tablet-nav-right a {
     color: var(--1, #100e0e);
     font-family: "SF Pro Display 400";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-right: 40px;
   }
   header .container .mobile-nav {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  header .container .nav {
-    max-width: 768px;
+  header {
     width: 100%;
-    flex-shrink: 0;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 4444;
+  }
+  header .container .nav {
     padding: 4px 0;
   }
   header .container .nav__location {
@@ -942,7 +978,6 @@ header .container .mobile-nav {
     max-width: 1200px;
     width: 100%;
     height: 94px;
-    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1012,6 +1047,8 @@ header .container .mobile-nav {
     line-height: normal;
   }
   header .container .nav .third-nav {
+    max-width: 768px;
+    width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -1088,7 +1125,6 @@ header .container .mobile-nav {
     max-width: 12000px;
     width: 100%;
     height: 80px;
-    flex-shrink: 0;
     display: none;
   }
   header .container .nav .fourth-nav .first-phone {
@@ -1117,7 +1153,6 @@ header .container .mobile-nav {
     max-width: 280px;
     width: 100%;
     height: 64px;
-    flex-shrink: 0;
     border-radius: 8px;
     background: linear-gradient(90deg, #000 22.19%, #5e556b 100%);
   }
@@ -1147,6 +1182,8 @@ header .container .mobile-nav {
     display: none;
   }
   header .container .mobile-nav {
+    max-width: 768px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1160,13 +1197,16 @@ header .container .mobile-nav {
 }
 main .hero_section {
   background: #d0eafc;
-  padding-top: 100px;
+  padding-top: 438px;
 }
 main .hero_section .container .hero {
   display: flex;
   align-items: start;
   gap: 48px;
   justify-content: center;
+}
+main .hero_section .container .hero .mobile-hero {
+  display: none;
 }
 main .hero_section .container .hero .hero-content {
   display: flex;
@@ -1184,6 +1224,9 @@ main .hero_section .container .hero .hero-content-title {
   margin: 0;
   margin-top: 21px;
   margin-bottom: 19px;
+}
+main .hero_section .container .hero .hero-content-title .one-mob {
+  display: none;
 }
 main .hero_section .container .hero .hero-content .hero-price {
   color: #1e3240;
@@ -1257,6 +1300,96 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
     margin: 0;
     margin-top: 21px;
     margin-bottom: 19px;
+  }
+  main .hero_section .container .hero .hero-content-title .one-mob {
+    display: none;
+  }
+  main .hero_section .container .hero .hero-content .hero-price {
+    color: #1e3240;
+    font-family: "SF Pro Display 400";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 19px;
+  }
+  main .hero_section .container .hero .hero-content .hero-price span {
+    color: #1e3240;
+    font-family: "SF Pro Display 400";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  main .hero_section .container .hero .hero-content .hero-btn {
+    color: #fff;
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 160px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--prime, #0071e4);
+    border: none;
+  }
+  main .hero_section .container .hero .hero-content .hero-btn:hover {
+    background: var(--light-prime, #2a93fd);
+  }
+}
+@media screen and (max-width: 554px) {
+  main .hero_section {
+    background: #d0eafc;
+    padding-top: 50px;
+  }
+  main .hero_section .container .hero {
+    display: flex;
+    align-items: start;
+    gap: 48px;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  main .hero_section .container .hero .hero-img {
+    display: block;
+    margin: 0 auto;
+    display: none;
+  }
+  main .hero_section .container .hero .mobile-hero {
+    display: block;
+    margin: 0 auto;
+  }
+  main .hero_section .container .hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0 auto;
+  }
+  main .hero_section .container .hero .hero-content-title {
+    color: #1e3240;
+    font-family: "SF Pro Display 700";
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    margin-top: 21px;
+    margin-bottom: 19px;
+    display: flex;
+    align-items: center;
+  }
+  main .hero_section .container .hero .hero-content-title img {
+    margin: 0 10px;
+    display: none;
+  }
+  main .hero_section .container .hero .hero-content-title .one-mob {
+    display: block;
   }
   main .hero_section .container .hero .hero-content .hero-price {
     color: #1e3240;
@@ -1442,6 +1575,152 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   font-family: "SF Pro Display 500";
 }
 
+@media screen and (max-width: 1129px) {
+  .buy_section {
+    padding-bottom: 40px;
+  }
+  .buy_section .container .buy-title {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 500";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    margin: 24px 0 34px 0;
+  }
+  .buy_section .container .top-models {
+    color: var(--prime, #0071e4);
+    font-family: "SF Pro Display 500";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .buy_section .container .buy-cards {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .buy_section .container .buy-cards-1 {
+    width: 282px;
+    height: 611px;
+    background: #eccece;
+    padding: 20px 8px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+  }
+  .buy_section .container .buy-cards-1-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buy_section .container .buy-cards-1-icons .qavs {
+    color: #0071e4;
+  }
+  .buy_section .container .buy-cards-1-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 500";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .buy_section .container .buy-cards-1-info {
+    color: var(--06, #706e6e);
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 16px;
+  }
+  .buy_section .container .buy-cards-1-price {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-between;
+  }
+  .buy_section .container .buy-cards-1-price .not-price {
+    color: var(--05, #878787);
+    font-family: "SF Pro Display 400";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: strikethrough;
+  }
+  .buy_section .container .buy-cards-1-price .price-card-1 {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 500";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .buy_section .container .buy-cards-1-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 76px;
+    gap: 8px;
+    background: #0071e4;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+  .buy_section .container .buy-cards-1-button:hover {
+    cursor: pointer;
+    background: #0071e4;
+    opacity: 0.8;
+    transition: all 0.1s ease;
+  }
+  .buy_section .container .buy-cards-1-button:focus {
+    cursor: pointer;
+    background: #46c609;
+    transition: all 0.1s ease;
+    outline: none;
+  }
+  .buy_section .container .buy-cards-1-end {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .buy_section .container .buy-cards-1-end-1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+  }
+  .buy_section .container .buy-cards-1-end-2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #706e6e;
+    font-family: "SF Pro Display 500";
+  }
+}
 .about-us {
   padding: 32px;
 }
@@ -1468,6 +1747,9 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
 .black-container {
   display: flex;
   gap: 88px;
+}
+.black-container .middle-img {
+  display: none;
 }
 .black-container .black-content {
   padding-top: 82px;
@@ -1521,6 +1803,135 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   background-color: #46c609;
 }
 
+@media screen and (max-width: 813px) {
+  .black {
+    background-color: black;
+  }
+  .black-container {
+    display: flex;
+    gap: 68px;
+  }
+  .black-container .middle-img {
+    display: none;
+  }
+  .black-container .black-content {
+    padding-top: 82px;
+  }
+  .black-container .black-content img {
+    max-width: 246px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .black-container .black-content-title {
+    color: #fff;
+    font-family: "SF Pro Display 700";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .black-container .black-content-desc {
+    color: #fff;
+    font-family: "SF Pro Display 500";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 16px 0 24px 0;
+  }
+  .black-container .black-content .hero-btn {
+    color: #fff;
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 160px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--prime, #0071e4);
+    border: none;
+  }
+  .black-container .black-content .hero-btn:hover {
+    background: var(--light-prime, #2a93fd);
+  }
+  .black-container .black-content .hero-btn:focus {
+    background-color: #46c609;
+  }
+}
+@media screen and (max-width: 605px) {
+  .black {
+    background-color: black;
+    padding: 20px 0;
+  }
+  .black-container {
+    display: flex;
+    gap: 18px;
+    height: 151px;
+  }
+  .black-container img {
+    display: none;
+  }
+  .black-container .middle-img {
+    display: block;
+  }
+  .black-container .black-content {
+    padding-top: 0;
+  }
+  .black-container .black-content img {
+    max-width: 246px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .black-container .black-content-title {
+    color: #fff;
+    font-family: "SF Pro Display 700";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .black-container .black-content-desc {
+    color: #fff;
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 16px 0 24px 0;
+  }
+  .black-container .black-content .hero-btn {
+    color: #fff;
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 120px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--prime, #0071e4);
+    border: none;
+  }
+  .black-container .black-content .hero-btn:hover {
+    background: var(--light-prime, #2a93fd);
+  }
+  .black-container .black-content .hero-btn:focus {
+    background-color: #46c609;
+  }
+}
 .container .service-title {
   color: var(--1, #100e0e);
   font-family: "SF Pro Display 700";
@@ -1538,6 +1949,7 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  justify-content: space-around;
 }
 .container .service-cards-1 {
   width: 228px;
@@ -1591,6 +2003,9 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   cursor: pointer;
   transition: 0.1s all ease;
 }
+.container .service-cards-1-response {
+  display: none;
+}
 .container .service-cards-2 {
   width: 228px;
   height: 500px;
@@ -1642,6 +2057,9 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   background-color: #0071e4;
   cursor: pointer;
   transition: 0.1s all ease;
+}
+.container .service-cards-2-response {
+  display: none;
 }
 .container .service-cards-3 {
   width: 228px;
@@ -1695,6 +2113,9 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   cursor: pointer;
   transition: 0.1s all ease;
 }
+.container .service-cards-3-response {
+  display: none;
+}
 .container .service-cards-4 {
   width: 228px;
   height: 500px;
@@ -1746,6 +2167,9 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   background-color: #0071e4;
   cursor: pointer;
   transition: 0.1s all ease;
+}
+.container .service-cards-4-response {
+  display: none;
 }
 .container .service-cards-5 {
   width: 228px;
@@ -1799,7 +2223,1209 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   cursor: pointer;
   transition: 0.1s all ease;
 }
+.container .service-cards-5-response {
+  display: none;
+}
 
+@media screen and (max-width: 1100px) {
+  .container .service-title {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 700";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 24px;
+    margin-top: 40px;
+  }
+  .container .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+  }
+  .container .service-cards-1 {
+    width: 228px;
+    height: 500px;
+    background: linear-gradient(180.04deg, #fe94a6 0.04%, #f2f2f2 65.84%);
+    border-radius: 16px;
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-1-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-1-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-1-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-1-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: none;
+  }
+  .container .service-cards-2 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #e685ff 0.04%, #f2f2f2 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-2-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-2-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-2-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-2-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: none;
+  }
+  .container .service-cards-3 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #7de9ff 0.04%, #f2f2f2 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-3-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-3-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-3-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-3-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: none;
+  }
+  .container .service-cards-4 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #ffe685 0.04%, #f6f6f6 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-4-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-4-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-4-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-4-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: none;
+  }
+  .container .service-cards-5 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #adffc1 0.04%, #f2f2f2 65.84%), #f2f2f2;
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-5-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-5-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-5-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-5-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: none;
+  }
+}
+@media screen and (max-width: 740px) {
+  .container .service-title {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 700";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 24px;
+    margin-top: 40px;
+  }
+  .container .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .container .service-cards-1 {
+    width: 228px;
+    height: 500px;
+    background: linear-gradient(180.04deg, #fe94a6 0.04%, #f2f2f2 65.84%);
+    border-radius: 16px;
+    padding: 24px 8px 32px 8px;
+    position: relative;
+    display: none;
+  }
+  .container .service-cards-1-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-1-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-1-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-1-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: block;
+    border-radius: 16px;
+    background: #f9f9f9;
+    max-width: 720px;
+    width: 100%;
+    height: 158px;
+    display: flex;
+    align-items: start;
+    border: 1px solid black;
+  }
+  .container .service-cards-1-response .service-cards-1-img {
+    margin-top: 10px;
+    margin-right: 26px;
+  }
+  .container .service-cards-1-response .service-card-res-info {
+    max-width: 307px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .container .service-cards-1-response .service-card-res-info p {
+    text-align: start;
+  }
+  .container .service-cards-1-response .service-card-res-info .service-cards-1-info {
+    width: 307px;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    margin-top: 51px;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-2 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #e685ff 0.04%, #f2f2f2 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+    display: none;
+  }
+  .container .service-cards-2-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-2-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-2-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-2-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: block;
+    border-radius: 16px;
+    background: #f9f9f9;
+    max-width: 720px;
+    width: 100%;
+    height: 158px;
+    display: flex;
+    align-items: start;
+    border: 1px solid black;
+  }
+  .container .service-cards-1-response .service-cards-1-img {
+    margin-top: 10px;
+    margin-right: 26px;
+  }
+  .container .service-cards-1-response .service-card-res-info {
+    max-width: 307px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .container .service-cards-1-response .service-card-res-info p {
+    text-align: start;
+  }
+  .container .service-cards-1-response .service-card-res-info .service-cards-1-info {
+    width: 307px;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    margin-top: 51px;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-3 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #7de9ff 0.04%, #f2f2f2 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+    display: none;
+  }
+  .container .service-cards-3-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-3-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-3-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-3-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: block;
+    border-radius: 16px;
+    background: #f9f9f9;
+    max-width: 720px;
+    width: 100%;
+    height: 158px;
+    display: flex;
+    align-items: start;
+    border: 1px solid black;
+  }
+  .container .service-cards-1-response .service-cards-1-img {
+    margin-top: 10px;
+    margin-right: 26px;
+  }
+  .container .service-cards-1-response .service-card-res-info {
+    max-width: 307px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .container .service-cards-1-response .service-card-res-info p {
+    text-align: start;
+  }
+  .container .service-cards-1-response .service-card-res-info .service-cards-1-info {
+    width: 307px;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    margin-top: 51px;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-4 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #ffe685 0.04%, #f6f6f6 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+    display: none;
+  }
+  .container .service-cards-4-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-4-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-4-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-4-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: block;
+    border-radius: 16px;
+    background: #f9f9f9;
+    max-width: 720px;
+    width: 100%;
+    height: 158px;
+    display: flex;
+    align-items: start;
+    border: 1px solid black;
+  }
+  .container .service-cards-1-response .service-cards-1-img {
+    margin-top: 10px;
+    margin-right: 26px;
+  }
+  .container .service-cards-1-response .service-card-res-info {
+    max-width: 307px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .container .service-cards-1-response .service-card-res-info p {
+    text-align: start;
+  }
+  .container .service-cards-1-response .service-card-res-info .service-cards-1-info {
+    width: 307px;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    margin-top: 51px;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-5 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #adffc1 0.04%, #f2f2f2 65.84%), #f2f2f2;
+    padding: 24px 8px 32px 8px;
+    position: relative;
+    display: none;
+  }
+  .container .service-cards-5-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-5-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-5-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-5-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: block;
+    border-radius: 16px;
+    background: #f9f9f9;
+    max-width: 720px;
+    width: 100%;
+    height: 158px;
+    display: flex;
+    align-items: start;
+    border: 1px solid black;
+  }
+  .container .service-cards-1-response .service-cards-1-img {
+    margin-top: 10px;
+    margin-right: 26px;
+  }
+  .container .service-cards-1-response .service-card-res-info {
+    max-width: 307px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .container .service-cards-1-response .service-card-res-info p {
+    text-align: start;
+  }
+  .container .service-cards-1-response .service-card-res-info .service-cards-1-info {
+    width: 307px;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    margin-top: 51px;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+}
+@media screen and (max-width: 636px) {
+  .container .service-title {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 700";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 24px;
+    margin-top: 40px;
+  }
+  .container .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .container .service-cards-1 {
+    width: 228px;
+    height: 500px;
+    background: linear-gradient(180.04deg, #fe94a6 0.04%, #f2f2f2 65.84%);
+    border-radius: 16px;
+    padding: 24px 8px 32px 8px;
+    position: relative;
+    display: none;
+  }
+  .container .service-cards-1-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-1-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-1 .service-cards-1-buttoxn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    display: none;
+  }
+  .container .service-cards-1 .service-cards-1-buttoxn:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-1-response {
+    display: block;
+    border-radius: 16px;
+    background: #f9f9f9;
+    max-width: 720px;
+    width: 100%;
+    height: 158px;
+    display: flex;
+    align-items: start;
+    border: 1px solid black;
+  }
+  .container .service-cards-1-response .service-cards-1-img {
+    margin-top: 10px;
+    margin-right: 26px;
+  }
+  .container .service-cards-1-response .service-card-res-info {
+    max-width: 307px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .container .service-cards-1-response .service-card-res-info p {
+    text-align: start;
+  }
+  .container .service-cards-1-response .service-card-res-info .service-cards-1-info {
+    width: 100%;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    margin-top: 51px;
+    display: none;
+  }
+  .container .service-cards-1-response .service-cards-1-buttoxn:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-2 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #e685ff 0.04%, #f2f2f2 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-2-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-2-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-2-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-2-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-3 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #7de9ff 0.04%, #f2f2f2 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-3-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-3-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-3-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-3-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-4 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #ffe685 0.04%, #f6f6f6 65.84%);
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-4-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-4-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-4-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-4-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+  .container .service-cards-5 {
+    width: 228px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #adffc1 0.04%, #f2f2f2 65.84%), #f2f2f2;
+    padding: 24px 8px 32px 8px;
+    position: relative;
+  }
+  .container .service-cards-5-title {
+    color: var(--1, #100e0e);
+    text-align: center;
+    font-family: "SF Pro Display 700";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .container .service-cards-5-info {
+    color: var(--07, #585656);
+    text-align: center;
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  .container .service-cards-5-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    color: #0071e4;
+    font-family: "SF Pro Display 500";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 21px;
+    border: 1px solid #0071e4;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 18px;
+  }
+  .container .service-cards-5-button:hover {
+    color: #c1e0ff;
+    background-color: #0071e4;
+    cursor: pointer;
+    transition: 0.1s all ease;
+  }
+}
 .join {
   padding-top: 21px;
 }
@@ -1807,6 +3433,9 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   gap: 88px;
   display: flex;
   padding: 40px 20px;
+}
+.join .join-container .join-left .tablet-img-join {
+  display: none;
 }
 .join .join-container .join-right-h1 {
   color: var(--1, #100e0e);
@@ -1885,8 +3514,341 @@ main .hero_section .container .hero .hero-content .hero-btn:hover {
   color: #fff;
   outline: none;
 }
+.join .join-container .join-right .tablet-join-right-card {
+  display: none;
+}
 
+@media screen and (max-width: 1109px) {
+  .join {
+    padding-top: 21px;
+  }
+  .join .join-container {
+    gap: 32px;
+    display: flex;
+    padding: 40px 20px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .join .join-container .join-left .laptop-img-join {
+    display: none;
+  }
+  .join .join-container .join-left .tablet-img-join {
+    display: block;
+  }
+  .join .join-container .join-right-h1 {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 700";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    width: 421px;
+  }
+  .join .join-container .join-right-p {
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 400";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    width: 421px;
+  }
+  .join .join-container .join-right-card {
+    width: 486px;
+    background: linear-gradient(90.34deg, #f7355d 0.3%, #9747ff 101.33%);
+    border-radius: 16px;
+    margin-top: 25px;
+    padding: 16px 32px 32px;
+    display: none;
+  }
+  .join .join-container .join-right-card h1 {
+    color: #fff;
+    font-family: "SF Pro Display 700";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+  }
+  .join .join-container .join-right-card p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  .join .join-container .join-right-card .input-and-button {
+    display: flex;
+    margin-top: 16px;
+  }
+  .join .join-container .join-right-card .input-and-button input {
+    width: 246px;
+    height: 56px;
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-right: 16px;
+    font-family: "SF Pro Display 500";
+  }
+  .join .join-container .join-right-card .input-and-button button {
+    width: 160px;
+    height: 56px;
+    background: #e7e7e7;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .join .join-container .join-right-card .input-and-button button:focus {
+    background: #0071e4;
+    color: #fff;
+    outline: none;
+  }
+  .join .join-container .join-right .tablet-join-right-card {
+    display: block;
+  }
+  .join .join-container .join-right .tablet-join-right-card .tablet-view-join {
+    border-radius: 16px;
+    background: linear-gradient(90deg, #f7355d 0.3%, #9747ff 101.33%);
+    margin-top: 16px;
+    padding: 8px 32px 8px 16px;
+    width: 279px;
+    height: 63px;
+    flex-shrink: 0;
+  }
+  .join .join-container .join-right .tablet-join-right-card .tablet-view-join h1 {
+    color: #fff;
+    font-family: "SF Pro Display 700";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+  }
+  .join .join-container .join-right .tablet-join-right-card .tablet-view-join p {
+    color: #fff;
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 5px;
+  }
+  .join .join-container .join-right .tablet-join-right-card .input-and-button {
+    margin-top: 16px;
+    display: flex;
+  }
+  .join .join-container .join-right .tablet-join-right-card .input-and-button input {
+    display: flex;
+    width: 246px;
+    height: 56px;
+    padding: 13px 29px 14px 24px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--015, #dbdbdb);
+    background: #fff;
+    color: var(--05, #878787);
+    font-family: "SF Pro Display 400";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .join .join-container .join-right .tablet-join-right-card .input-and-button button {
+    display: flex;
+    width: 160px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 6px;
+    border: none;
+  }
+}
+@media screen and (max-width: 718px) {
+  .join {
+    padding-top: 21px;
+  }
+  .join .join-container {
+    gap: 32px;
+    display: block;
+    padding: 40px 20px;
+    margin: 0 auto;
+  }
+  .join .join-container .join-left {
+    display: none;
+  }
+  .join .join-container .join-left .laptop-img-join {
+    display: none;
+  }
+  .join .join-container .join-left .tablet-img-join {
+    display: none;
+  }
+  .join .join-container .join-right-h1 {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 700";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    width: 100%;
+  }
+  .join .join-container .join-right-p {
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 400";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .join .join-container .join-right-card {
+    width: 100%;
+    background: linear-gradient(90.34deg, #f7355d 0.3%, #9747ff 101.33%);
+    border-radius: 16px;
+    margin-top: 25px;
+    padding: 16px 32px 32px;
+    display: none;
+  }
+  .join .join-container .join-right-card h1 {
+    color: #fff;
+    font-family: "SF Pro Display 700";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+  }
+  .join .join-container .join-right-card p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  .join .join-container .join-right-card .input-and-button {
+    display: flex;
+    margin-top: 16px;
+  }
+  .join .join-container .join-right-card .input-and-button input {
+    width: 246px;
+    height: 56px;
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-right: 16px;
+    font-family: "SF Pro Display 500";
+  }
+  .join .join-container .join-right-card .input-and-button button {
+    width: 160px;
+    height: 56px;
+    background: #e7e7e7;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .join .join-container .join-right-card .input-and-button button:focus {
+    background: #0071e4;
+    color: #fff;
+    outline: none;
+  }
+  .join .join-container .join-right .tablet-join-right-card {
+    display: block;
+  }
+  .join .join-container .join-right .tablet-join-right-card .tablet-view-join {
+    border-radius: 16px;
+    background: linear-gradient(90deg, #f7355d 0.3%, #9747ff 101.33%);
+    margin-top: 16px;
+    padding: 15px;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+  }
+  .join .join-container .join-right .tablet-join-right-card .tablet-view-join h1 {
+    color: #fff;
+    font-family: "SF Pro Display 700";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+  }
+  .join .join-container .join-right .tablet-join-right-card .tablet-view-join p {
+    color: #fff;
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 5px;
+  }
+  .join .join-container .join-right .tablet-join-right-card .input-and-button {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  .join .join-container .join-right .tablet-join-right-card .input-and-button input {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    padding: 13px 29px 14px 24px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--015, #dbdbdb);
+    background: #fff;
+    color: var(--05, #878787);
+    font-family: "SF Pro Display 400";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .join .join-container .join-right .tablet-join-right-card .input-and-button button {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    color: var(--07, #585656);
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 0px;
+    border: none;
+  }
+}
 footer .footer-container {
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   padding: 40px 20px;
 }
@@ -2000,4 +3962,277 @@ footer .footer-container .fourth-p5 {
   font-weight: 500;
   line-height: normal;
   margin-top: 10px;
+}
+footer .footer-container .footer-respon {
+  display: none;
+}
+footer .footer-container .footer-respon .first-laptop {
+  display: none;
+}
+footer .footer-container .footer-respon .second-laptop {
+  display: none;
+}
+footer .footer-container .footer-respon .third-laptop {
+  display: none;
+}
+footer .footer-container .footer-respon .fourth-laptop {
+  display: none;
+}
+footer .footer-container .footer-respon .extra-location {
+  display: none;
+}
+footer .footer-container .footer-respon .extra-catalog {
+  display: none;
+}
+
+@media screen and (max-width: 1011px) {
+  footer .footer-container {
+    display: flex;
+    padding: 40px 20px;
+    max-width: 1011px;
+    width: 100%;
+    align-items: none;
+  }
+  footer .footer-container .first {
+    width: 273px;
+    color: var(--03, #b7b7b7);
+    font-family: "SF Pro Display 400";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 48px;
+    display: none;
+  }
+  footer .footer-container .first-p1 {
+    margin-top: 27px;
+  }
+  footer .footer-container .first-p2 {
+    margin-top: 8px;
+  }
+  footer .footer-container .first-p3 {
+    margin-top: 24px;
+  }
+  footer .footer-container .second {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: none;
+  }
+  footer .footer-container .second-list {
+    list-style-type: none;
+  }
+  footer .footer-container .second-list-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 16px;
+    color: #100e0e;
+  }
+  footer .footer-container .third {
+    margin-left: 40px;
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: none;
+  }
+  footer .footer-container .third-list {
+    list-style-type: none;
+  }
+  footer .footer-container .third-list-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 16px;
+    color: #100e0e;
+  }
+  footer .footer-container .fourth {
+    margin-left: 175px;
+    display: none;
+  }
+  footer .footer-container .fourth-h1 {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 500";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+  }
+  footer .footer-container .fourth-p {
+    color: var(--06, #706e6e);
+    font-family: "SF Pro Display 400";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0;
+  }
+  footer .footer-container .fourth-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  footer .footer-container .fourth-icons-p {
+    color: var(--prime, #0071e4);
+    font-family: "SF Pro Display 500";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 24px;
+  }
+  footer .footer-container .fourth-p4 {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 40px;
+  }
+  footer .footer-container .fourth-p5 {
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 500";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+  }
+  footer .footer-container .footer-respon {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .footer-container .footer-respon .first-laptop {
+    display: none;
+    display: flex;
+    align-items: start;
+    width: 500px;
+    color: var(--03, #b7b7b7);
+    font-family: "SF Pro Display 400";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 48px;
+    gap: 32px;
+  }
+  footer .footer-container .footer-respon .first-laptop .first-plar .first-p1 {
+    margin-top: 0;
+  }
+  footer .footer-container .footer-respon .first-laptop .first-plar .first-p2 {
+    margin-top: 8px;
+  }
+  footer .footer-container .footer-respon .first-laptop .first-plar .first-p3 {
+    margin-top: 8px;
+  }
+  footer .footer-container .footer-respon .second-laptop {
+    max-width: 591px;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+    margin-top: 32px;
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+  }
+  footer .footer-container .footer-respon .second-laptop .second-list {
+    column-gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 54px;
+  }
+  footer .footer-container .footer-respon .third-laptop {
+    max-width: 591px;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+    margin-top: 32px;
+    color: var(--1, #100e0e);
+    font-family: "SF Pro Display 400";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+  }
+  footer .footer-container .footer-respon .third-laptop .third-list {
+    column-gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 54px;
+  }
+  footer .footer-container .footer-respon .fourth-laptop {
+    max-width: 1011px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .footer-container .footer-respon .fourth-laptop .fourth-h1 {
+    margin-right: 16px;
+  }
+  footer .footer-container .footer-respon .fourth-laptop .fourth-p {
+    color: var(--06, #706e6e);
+    font-family: "SF Pro Display 400";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 60px;
+  }
+  footer .footer-container .footer-respon .extra-location {
+    display: block;
+    align-items: start;
+  }
+  footer .footer-container .footer-respon .extra-location .fourth-icons-p {
+    margin-top: 20px;
+    margin-bottom: 33px;
+  }
+  footer .footer-container .footer-respon .extra-catalog {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    gap: 17px;
+    margin-top: 32px;
+  }
+  footer .footer-container .footer-respon .extra-catalog-1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--09, #282626);
+    font-family: "SF Pro Display 400";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  footer .footer-container .footer-respon-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 596px) {
+  footer {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
